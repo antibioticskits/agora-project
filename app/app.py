@@ -67,9 +67,10 @@ def updateMachine():
 def getMachineList():
     try:
         machines = db.Machines.find()
-        
         machineList = []
+
         for machine in machines:
+            print "hello"
             print machine
             machineItem = {
                     'device':machine['device'],
@@ -81,6 +82,7 @@ def getMachineList():
                     }
             machineList.append(machineItem)
     except Exception,e:
+        print "error"
         return str(e)
     return json.dumps(machineList)
 
