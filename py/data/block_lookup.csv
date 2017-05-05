@@ -1,0 +1,11 @@
+block_type,block_name,block_id,block_property1,block_property2
+initiator,Init1,I1,5,0
+initiator,Init2,I2,3,1
+monomer,Mon1,M1,5,0
+monomer,Mon2,M2,5,0
+monomer,Mon3,M3,3,0
+monomer,Mon4,M4,4,0
+monomer,Mon5,M5,5,1
+terminator,Term1,T1,4,0
+terminator,Term2,T2,4,0
+terminator,Term3,T3,4,0

@@ -8,6 +8,7 @@ application = Flask(__name__)
 client = MongoClient('localhost:27017')
 db = client.MachineData
 
+
 @application.route("/addMachine",methods=['POST'])
 def addMachine():
     try:
