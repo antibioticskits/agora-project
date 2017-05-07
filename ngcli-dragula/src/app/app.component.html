@@ -1,0 +1,24 @@
+<h1>
+    {{title}}
+</h1>
+<div class = 'wrapper'>
+  <div id="drop-origin" class='container' [dragula]='"configurator-bag"' [dragulaModel]='initiators'>
+    <div *ngFor='let initiator of initiators' [innerHtml]='initiator'></div>
+  </div>
+
+  <div id="drop-origin" class='container' [dragula]='"configurator-bag"' [dragulaModel]='monomers'>
+    <div *ngFor='let monomer of monomers' [innerHtml]='monomer'></div>
+  </div>
+
+  <div id="drop-origin" class='container' [dragula]='"configurator-bag"' [dragulaModel]='terminators'>
+    <div *ngFor='let terminator of terminators' [innerHtml]='terminator'></div>
+  </div>
+
+  <div id="drop-target" class='container' [dragula]='"configurator-bag"' [dragulaModel]='blocks'>
+    <div *ngIf="blocks.length == 0">Drag and drop your items here.</div>
+    <div *ngFor='let block of blocks' [innerHtml]='block'></div>
+  </div>
+</div>
+<br>
+<div class="button" (click)="submitBlocks(blocks)">Analyze</div>
+<em class="arrayDisplay" *ngFor='let block of blocks' [innerHTML]='block + ", "'></em>
