@@ -36,7 +36,8 @@ BlockLibraryComponent = __decorate([
         styleUrls: ['./block-library.component.css'],
         providers: [block_library_service_1.BlockLibraryService]
     }),
-    __metadata("design:paramtypes", [block_library_service_1.BlockLibraryService])
+    __metadata("design:paramtypes", [typeof (_a = typeof block_library_service_1.BlockLibraryService !== "undefined" && block_library_service_1.BlockLibraryService) === "function" && _a || Object])
 ], BlockLibraryComponent);
 exports.BlockLibraryComponent = BlockLibraryComponent;
+var _a;
 //# sourceMappingURL=block-library.component.js.map

@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Narrow Jumbotron Template for Bootstrap</title>
+    <title>antibiotic-kits</title>
 
     <!-- Bootstrap core CSS -->
     <link href="static/css/bootstrap.min.css" rel="stylesheet">
@@ -177,10 +177,10 @@
         <div class="header clearfix">
             <nav>
                 <ul class="nav nav-pills pull-right">
-                    <li role="presentation" class="active"><a href="#" data-toggle="modal" ng-click="showAddPopUp()" >Add</a></li>
+                    <li role="presentation" class="active"><a href="#" data-toggle="modal" ng-click="showAddPopUp()">Add Entry</a></li>
                 </ul>
             </nav>
-            <h3 class="text-muted">Remote Test Exec Manager</h3>
+            <h3 class="text-muted">antibiotic-kits</h3>
         </div>
 
         <div class="bs-example" data-example-id="panel-without-body-with-table">
@@ -253,9 +253,8 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button"  class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button ng-show="showAdd" id="btnAdd" ng-click="addMachine()" type="button" class="btn btn-primary">Add machine</button>
-
-					<button ng-show="!showAdd" id="btnAdd" ng-click="updateMachine()" type="button" class="btn btn-primary">Update</button>
+                    <button ng-show="showAdd" id="btnAdd" ng-click="addMachine()" type="button" class="btn btn-primary">Add Entry</button>
+                    <button ng-show="!showAdd" id="btnAdd" ng-click="updateMachine()" type="button" class="btn btn-primary">Update Entry</button>
                 </div>
             </div>
         </div>
