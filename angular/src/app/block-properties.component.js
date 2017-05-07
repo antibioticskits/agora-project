@@ -1,0 +1,1 @@
+//# sourceMappingURL=block-properties.component.js.map
