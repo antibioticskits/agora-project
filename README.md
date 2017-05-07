@@ -1,5 +1,10 @@
 # antibiotic-kits
 
+<<<<<<< HEAD
+put in info here
+
+2017-04-27 To run, run server only! Don't run a specific mongo db, i.e. from anywhere(?) mongod. then compile/execute python app/app.py script
+=======
 ## Dependencies
 
 ### Install MongoDB
@@ -42,3 +47,4 @@ brew services start mongodb
 # Run and view the app on localhost:5000/
 python app.py
 ```
+>>>>>>> origin/ns-changes
