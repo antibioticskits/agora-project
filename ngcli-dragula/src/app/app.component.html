@@ -15,10 +15,10 @@
   </div>
 
   <div id="drop-target" class='container' [dragula]='"configurator-bag"' [dragulaModel]='blocks'>
-    <div *ngIf="blocks.length == 0">Drag and drop your items here.</div>
+    <p *ngIf="blocks.length == 0">Drag and drop your items here.</p>
     <div *ngFor='let block of blocks' [innerHtml]='block'></div>
   </div>
 </div>
 <br>
-<div class="button" (click)="submitBlocks(blocks)">Analyze</div>
-<em class="arrayDisplay" *ngFor='let block of blocks' [innerHTML]='block + ", "'></em>
+<div class="button" (click)="submitBlocks(blocks)">Analyze This</div>
+<p class="arrayDisplay" *ngFor='let block of blocks' [innerHTML]='block + ", "'></p>
