@@ -1,0 +1,88 @@
+<div class = 'wrapper'>
+  <div id="drop-origin" class='container' [dragula]='"configurator-bag"' [dragulaModel]='initiators'>
+    <div *ngFor='let initiator of initiators' [innerHtml]='initiator'></div>
+  </div>
+
+  <div id="drop-origin" class='container' [dragula]='"configurator-bag"' [dragulaModel]='monomers'>
+    <div *ngFor='let monomer of monomers' [innerHtml]='monomer'></div>
+  </div>
+
+  <div id="drop-origin" class='container' [dragula]='"configurator-bag"' [dragulaModel]='terminators'>
+    <div *ngFor='let terminator of terminators' [innerHtml]='terminator'></div>
+  </div>
+
+  <div id="drop-target" class='container' [dragula]='"configurator-bag"' [dragulaModel]='blocks'>
+    <p *ngIf="blocks.length == 0">Drag and drop your items here.</p>
+    <div *ngFor='let block of blocks' [innerHtml]='block'></div>
+  </div>
+</div>
+<br>
+<div class="button"
+  (click)="submitBlocks(blocks)">Submit Experiment!</div>
+
+<br>
+
+<h2 *ngIf="current_experiment">Well combinations from experiment {{ current_experiment._id }} by {{current_experiment.user}}</h2>
+
+<table *ngIf="well_combinations">
+  <tr *ngIf="current_experiment">
+    <td><h3>Experiment blocks </h3></td>
+    <td>{{current_experiment.initiators}}</td>
+    <td>{{current_experiment.monomers}}</td>
+    <td>{{current_experiment.terminators}}</td>
+
+  </tr>
+
+  <tr>
+    <td><h3>Well number</h3></td>
+    <td><h3>Initiators</h3></td>
+    <td><h3>Monomers</h3></td>
+    <td><h3>Terminators</h3></td>
+  </tr>
+
+  <tr  *ngFor="let combo of well_combinations">
+    <td></td>
+    <td>{{combo.product_number}}</td>
+    <td>{{combo.initiators}}</td>
+    <td>{{combo.monomers}}</td>
+    <td>{{combo.terminators}}</td>
+  </tr>
+</table>
+
+
+<h1>Previously Submitted Experiments</h1>
+<table>
+  <tr>
+    <td><h2>Initiators</h2></td>
+    <td><h2>Monomers</h2></td>
+    <td><h2>Terminators</h2></td>
+    <td><h2>Username</h2></td>
+    <td><h2>Date</h2></td>
+  </tr>
+
+  <!-- <tr *ngFor="let experiment of experiments" (click)="deleteExperiment(experiment._id)"> -->
+  <tr *ngFor="let experiment of experiments">
+
+    <td>{{experiment.initiators}}</td>
+
+    <td>{{experiment.monomers}}</td>
+
+    <td>{{experiment.terminators}}</td>
+
+    <td><i>{{experiment.user}}</i></td>
+
+    <td>{{experiment.time}} </td>
+
+    <td><div class="button" style="font-size:12px"
+      (click)="deleteExperiment(experiment._id)">
+      Delete entry
+    </div><td>
+
+    <td><div class="button" style="font-size:12px"
+      (click)="makeCombinations(experiment)">
+      Get Well Combos!
+    </div></td>
+
+  </tr>
+</table>
+<!--<p class="arrayDisplay" *ngFor='let block of blocks' [innerHTML]='block + ", "'></p>-->
